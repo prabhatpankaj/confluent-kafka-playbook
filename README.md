@@ -49,5 +49,8 @@ via Jinja filter. Therefore, we can trick the properties configuration for all t
      ansible-playbook site.yml -i hosts_local
 
 
+     ansible-playbook -i hosts_local site.yml --extra-vars "target_hosts=kafka_broker_nodes role_name=confluent-kafka;
+
+
 # Reference
 https://docs.confluent.io/current/installation/installing_cp.html
