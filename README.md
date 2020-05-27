@@ -5,6 +5,23 @@ Each node will contain one kafka broker and one zookeeper instance and all of th
 For the installation, I will use kafka from https://www.confluent.io, or for more clarity I will call it as confluent kafka.
 The confluent itself provides two version, enterprise and open source. This playbook will use the latter version, which is an open source one.
 
+# Install ansible in master node 
+
+* Step :1 Set EPEL repository
+```
+yum update
+yum install epel-release -y
+```
+* Step:2 Install Anisble using yum command
+```
+yum install ansible
+```
+* Step:3 Setup keys based SSH authentication with Nodes.
+
+```
+ssh-keygen
+ssh-copy-id -i ~/.ssh/id_rsa.pub root@workermachine
+```
 _Note: this playbook only works in Redhat/CentOS 7_
 
 # Playbook Structure
