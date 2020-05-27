@@ -25,8 +25,8 @@ syncLimit=2
 #server.2={{zookeeper_server_2}}
 #server.3={{zookeeper_server_3}}
 
-{% for i,zookeeper_server in zookeeper_servers %}
-server.i=zookeeper_server
+{% for host in groups['kafka_broker_nodes'] %}
+server.{{ hostvars[host]['zookeeper_id'] | default(groups.kafka_broker_nodes.index(host) + 1)}}={{ host }}:{{zookeeper_peer_port}}:{{zookeeper_leader_port}}
 {% endfor %}
 
 autopurge.snapRetainCount=3
