@@ -21,9 +21,6 @@ clientPort=2181
  
 initLimit=5
 syncLimit=2
-#server.1={{zookeeper_server_1}}
-#server.2={{zookeeper_server_2}}
-#server.3={{zookeeper_server_3}}
 
 {% for host in groups['kafka_broker_nodes'] %}
 server.{{ hostvars[host]['zookeeper_id'] | default(groups.kafka_broker_nodes.index(host) + 1)}}={{ host }}:{{zookeeper_peer_port}}:{{zookeeper_leader_port}}
