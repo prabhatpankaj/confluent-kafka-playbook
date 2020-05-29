@@ -1,6 +1,6 @@
-node-01 ansible_host=45.79.124.144
-node-02 ansible_host=45.79.125.84
-node-03 ansible_host=172.105.42.129
+node-01 ansible_host=172.105.49.206
+node-02 ansible_host=172.105.63.209
+node-03 ansible_host=172.105.43.139
 
 [kafka_broker_nodes]
 node-[01:03]
