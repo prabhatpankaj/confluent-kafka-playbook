@@ -45,7 +45,7 @@ via Jinja filter. Therefore, we can trick the properties configuration for all t
 
 # Execute
 
-     ansible-playbook -i hosts_local site.yml --extra-vars "target_hosts=kafka_broker_nodes role_name=confluent-kafka";
+     ansible-playbook -i hosts_local site.yml --extra-vars '{"target_hosts":"kafka_broker_nodes","role_name": "confluent-kafka", "zookeeper_list": [{"host": "172.105.49.206", "broker_id": 1, "zookeeper_id":1}, {"host": "172.105.63.209" , "broker_id": 2, "zookeeper_id":2},{"host": "172.105.43.139" , "broker_id": 3, "zookeeper_id":3}] }';
 
 
 # Reference
