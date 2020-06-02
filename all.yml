@@ -1,0 +1,12 @@
+- hosts: broker
+  remote_user: root
+  tasks:
+  - import_role:
+      name: kafka-broker
+
+
+# - hosts: zookeeper
+#   remote_user: root
+#   tasks:
+#   - import_role:
+#       name: zookeeper
