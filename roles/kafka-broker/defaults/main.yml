@@ -15,7 +15,6 @@ kafka:
     systemd_file: /etc/systemd/system/kafka.service
     service_name: kafka
     datadir:
-      - /opt/apps/
       - /data1/kafka/data
       - /data2/kafka/data
     systemd:

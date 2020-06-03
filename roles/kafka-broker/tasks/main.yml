@@ -15,6 +15,15 @@
     state: directory
     mode: 0755
   with_items: "{{kafka.broker.datadir}}"
+  
+- name: create - /opt/apps/
+  file:
+    path: "/opt/apps/"
+    owner: "{{kafka.broker.user}}"
+    group: "{{kafka.broker.group}}"
+    state: directory
+    mode: 0755
+
 - name: distribute Kafka dist
   unarchive:
     src: "{{role_path}}/dist/{{kafka.broker.dist_file}}"
