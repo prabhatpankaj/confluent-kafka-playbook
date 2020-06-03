@@ -2,6 +2,7 @@
   remote_user: root
   vars:
     security_mode: plaintext
+    zookeeper_install: true
   tasks:
   - import_role:
       name: kafka-broker
