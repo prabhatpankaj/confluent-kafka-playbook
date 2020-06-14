@@ -1,13 +1,10 @@
-# 
+# kafka-deployment
+This is to deploy a Confluent Kafka Platform usig Ansible
 
-* example 
-```
-ansible-playbook -i hosts.yml all.yml --extra-vars '{"kafkabroker_install": true, "zookeeper_install": false}'
+### Download the Code
 
-```
+### Edit the hosts.yml file with your respective settings
 
+### Then execute the anisble playbook
 
-## Reference
-
-* [cp-ansible](https://github.com/confluentinc/cp-ansible)
-* [Running Kafka in Production](https://docs.confluent.io/current/kafka/deployment.html#cp-production-parameters)
+`ansible-playbook -i hosts.yml main.yml`
